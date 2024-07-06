@@ -1,3 +1,36 @@
+form {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+input {
+  border: 1px solid #808080;
+  border-radius: 4px;
+  width: 272px;
+  height: 40px;
+  padding: 0;
+}
+
+button {
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  width: 91px;
+  height: 40px;
+  background: #4e75ff;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  color: #fff;
+}
+
+button:hover {
+  background: #6c8cff;
+}
+
 .loader {
   width: 48px;
   height: 48px;
@@ -32,20 +65,62 @@
 
 .card-container {
   display: flex;
-  flex-direction: row-reverse;
-  gap: 24px;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .card {
-  display: flex;
-  flex-direction: row-reverse;
-  flex-basis: ((100% - 48px) / 3);
   width: 360px;
+  flex-basis: calc((100% - 40px) / 3);
+  box-sizing: border-box;
+  border: 1px solid #808080;
+  overflow: hidden;
 }
 
 .card-img-top {
-  display: flex;
-  /* flex-direction: row; */
+  height: 200px;
+  overflow: hidden;
+}
 
-  /* display: flex; */
+.card-img-top img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  gap: 24px;
+  justify-content: space-between;
+}
+
+.card-title {
+  margin-top: 0;
+}
+
+.card-text {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 133%;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }

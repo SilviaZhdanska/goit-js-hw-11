@@ -13,11 +13,11 @@ export function renderGallery(images) {
     <div class="card">
       <div class="card-img-top">
         <a href="${image.largeImageURL}">
-          <img src="${image.webformatURL}" alt="${image.tags}">
+          <img src="${image.webformatURL}" alt="${image.tags}" >
         </a>
       </div>
       <div class="card-body">
-        <h2 class="card-title">${image.tags}</h2>
+        <h2 class="card-title visually-hidden">${image.tags}</h2>
         <p class="card-text">Likes: ${image.likes}</p>
         <p class="card-text">Views: ${image.views}</p>
         <p class="card-text">Comments: ${image.comments}</p>
@@ -40,6 +40,8 @@ export function renderGallery(images) {
 
 export function showNoResultsMessage() {
   iziToast.info({
+    backgroundColor: 'red',
+    position: 'topRight',
     title: 'Info',
     message:
       'Sorry, there are no images matching your search query. Please try again!',
